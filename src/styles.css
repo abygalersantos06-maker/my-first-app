@@ -1,0 +1,14 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 25px;
+  min-height: 100vh;
+  background: #F3EBE9;
+  font-family: 'DM Sans', sans-serif;
+}
