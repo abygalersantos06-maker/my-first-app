@@ -1,16 +1,19 @@
 
 import { Component } from '@angular/core';
+import { Header } from './header/header';
 import { ProfileCard } from './profile-card/profile-card';
+import { Skills } from './skills/skills';
+import { Footer } from './footer/footer';
+import type { Proficiency } from './proficiency';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [ProfileCard],
+  imports: [Header, ProfileCard, Skills, Footer],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  fullName = 'Abygale Santos';
+  fullName = 'Abygale Rensy D. Santos';
   location = 'Mabalacat City, Pampanga';
   email = 'abygale.rsantos06@gmail.com';
   phone = '0922 266 2212';
@@ -27,11 +30,18 @@ export class App {
     'Angular'
   ];
 
-  message = 'Welcome to my profile!';
-  clickCount = 0;
+  proficiencies: Proficiency[] = [
+    { tool: 'HTML and CSS', level: 'Advanced' },
+    { tool: 'JavaScript', level: 'Intermediate' },
+    { tool: 'PHP and SQL', level: 'Intermediate' },
+    { tool: 'Figma and UI/UX Design', level: 'Advanced' }
+  ];
 
-  showMessage() {
-    this.clickCount++;
-    this.message = `You clicked the button ${this.clickCount} time(s).`;
+
+
+  selectedSkill = '';
+
+  onSkillSelected(skill: string) {
+    this.selectedSkill = skill;
   }
 }

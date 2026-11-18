@@ -1,38 +1,39 @@
 
 <main class="resume">
 
-  <header class="intro">
-    <h1>{{ fullName }}</h1>
+  <!-- HEADER COMPONENT -->
+  <app-header
+    [fullName]="fullName"
+    [location]="location"
+    [email]="email"
+    [phone]="phone"
+    [profile]="profile">
+  </app-header>
 
-    <p>
-      {{ location }} |
-      {{ phone }} |
-      <a [href]="'mailto:' + email">{{ email }}</a>
-    </p>
-  </header>
-
-  <section>
-    <h2>Personal Profile</h2>
-    <p>{{ profile }}</p>
-  </section>
-
+  <!-- PROFILE CARD COMPONENT -->
   <app-profile-card></app-profile-card>
 
-  <section>
-    <h2>Key Skills</h2>
+  <!-- SKILLS COMPONENT -->
+  <app-skills
+    [skills]="skills"
+    (skillSelected)="onSkillSelected($event)">
+  </app-skills>
 
-    <ul>
-      @for (skill of skills; track skill) {
-        <li>{{ skill }}</li>
-      }
-    </ul>
-  </section>
-
+  <!-- ANGULAR INTERACTION -->
   <section class="interaction">
-    <h2>Angular Interaction</h2>
-    <p>{{ message }}</p>
+    <h2 class="section-title">Angular Interaction</h2>
 
-    <button (click)="showMessage()">Click Me</button>
+    @if (selectedSkill) {
+      <p>You selected: {{ selectedSkill }}</p>
+    } @else {
+      <p>Click one of your skills above to see your selection.</p>
+    }
   </section>
+
+  <!-- FOOTER COMPONENT -->
+  <app-footer
+  [fullName]="fullName"
+  [proficiencies]="proficiencies">
+</app-footer>
 
 </main>

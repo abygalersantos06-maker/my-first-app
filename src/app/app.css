@@ -1,5 +1,5 @@
 
-/* MAIN CONTAINER */
+/* MAIN CV CONTAINER */
 .resume {
   max-width: 920px;
   margin: 35px auto;
@@ -13,136 +13,24 @@
   line-height: 1.85;
 }
 
-/* HEADER */
-.intro {
-  text-align: center;
-  padding: 30px 15px;
-  margin-bottom: 38px;
-  border-top: 1px solid #C99FA5;
-  border-bottom: 1px solid #C99FA5;
-  position: relative;
-}
-
-.intro h1 {
-  font-family: 'Playfair Display', Georgia, serif;
-  color: #59404E;
-  font-size: 2.8rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  margin: 0 0 12px;
-}
-
-.intro h1::after {
-  content: "✧";
-  display: block;
-  color: #B98791;
-  font-size: 1.2rem;
-  margin-top: 5px;
-}
-
-.intro p {
-  color: #765D69;
-  font-size: 0.9rem;
-}
-
-.intro a {
-  color: #A77C89;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.intro a:hover {
-  color: #59404E;
-  text-decoration: underline;
-}
-
-/* CONTENT SECTIONS */
-section {
-  margin: 35px 0;
-}
-
-section h2 {
-  color: #785564;
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 1.5rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  border-bottom: 1px solid #DFC5C5;
-  padding-bottom: 10px;
-}
-
-section p {
-  color: #59404E;
-  font-size: 0.97rem;
-}
-
-/* SKILLS */
-ul {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px 25px;
-  padding-left: 25px;
-}
-
-ul li {
-  color: #59404E;
-  padding: 4px;
-}
-
-ul li::marker {
-  color: #B98791;
-}
-
-/* BUTTON */
-button {
-  padding: 12px 28px;
-  border: 1px solid #A77C89;
-  border-radius: 6px;
-  background: #A77C89;
-  color: #FFFFFF;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.95rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-button:hover {
-  background: #785564;
-  border-color: #785564;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 14px rgba(89, 64, 78, 0.16);
-}
-
-button:active {
-  transform: scale(0.98);
-}
-
-/* INTERACTION CARD */
+/* ANGULAR INTERACTION */
 .interaction {
   padding: 25px;
+  margin: 35px 0;
   background: #F1E6E4;
   border: 1px solid #DFC5C5;
   border-left: 4px solid #B98791;
   border-radius: 8px;
 }
 
-/* RESPONSIVE */
-@media (max-width: 600px) {
-  body {
-    padding: 10px;
-  }
+.interaction p {
+  color: #59404E;
+}
 
+/* RESPONSIVE DESIGN */
+@media (max-width: 600px) {
   .resume {
     margin: 10px auto;
     padding: 22px;
-  }
-
-  .intro h1 {
-    font-size: 2rem;
-  }
-
-  ul {
-    grid-template-columns: 1fr;
   }
 }

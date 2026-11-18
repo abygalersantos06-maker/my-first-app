@@ -1,6 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
+/* GLOBAL STYLES */
 * {
   box-sizing: border-box;
 }
@@ -10,5 +11,23 @@ body {
   padding: 25px;
   min-height: 100vh;
   background: #F3EBE9;
+  color: #252525;
   font-family: 'DM Sans', sans-serif;
+  line-height: 1.7;
+}
+
+/* SHARED SECTION STYLES */
+section {
+  margin: 26px 0;
+}
+
+/* SHARED SECTION HEADINGS */
+.section-title {
+  color: #785564;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #DFC5C5;
+  padding-bottom: 10px;
 }
